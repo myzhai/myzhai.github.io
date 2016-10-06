@@ -1,0 +1,416 @@
+<!DOCTYPE html><html>
+    
+    <head>
+        <meta charset="utf-8">
+            <title></title>
+            <style>
+                *{margin:0;padding:0}
+                body{
+                    min-width: 200px;
+                    max-width: 760px;
+                    margin: 0 auto;
+                    padding: 30px;
+                    
+                    font-family:"Nunito","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;background:#fff;color:#333}
+            .markdown-body{line-height:1.5em;font-size:1.3em}
+            h1{font-size:1.8em}
+            h2{font-size:1.5em}
+            h3{font-size:1.3em}
+            a{text-decoration:none;outline-width:0;color:#258fb8}
+            a:hover{color:#2571B8}
+            
+            .markdown-body img.left,.markdown-body video.left{float:left;margin-right:1.5em}
+            
+            
+            .markdown-body img.right, .markdown-body video.right{float:right;margin-left:1.5em}
+            
+            .markdown-body img.center,.markdown-body video.center{display:block;margin:0 auto 1.5em}
+            
+            .markdown-body img.left, .markdown-body video.left, .markdown-body img.right, .markdown-body video.right{margin-bottom:.8em}
+            
+            .alignleft{float:left}
+            .alignright{float:right}
+            .clearfix{*zoom:1}
+            .clearfix:after{content:"";display:table;clear:both}
+            
+            
+            .markdown-body h1{font-weight:300;line-height:35px;margin-bottom:20px}
+            .markdown-body h1 a{color:#666}
+            .markdown-body a:hover{text-decoration:underline}
+            .markdown-body .more-link{display:block;margin-top:16px;padding-left:30px;position:relative}
+            .markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body iframe,.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6,.markdown-body .video-container{margin-top:20px}
+            .markdown-body ul,.markdown-body ol,.markdown-body dl{margin-left:20px}
+            .markdown-body ul ul,.markdown-body ul ol,.markdown-body ul dl,.markdown-body ol ul,.markdown-body ol ol,.markdown-body ol dl,.markdown-body dl ul,.markdown-body dl ol,.markdown-body dl dl{margin-top:0}
+            .markdown-body strong{font-weight:bold}
+            .markdown-body em{font-style:italic}
+            .markdown-body p{margin-top:10px}
+            .markdown-body h2{font-weight:300;border-bottom:1px solid #ddd;position:relative}
+            .markdown-body h2:before{content:"";position:absolute;bottom:-2px;border-bottom:1px solid #fff;width:100%}
+            .markdown-body img,.markdown-body video{max-width:100%;height:auto}
+            .markdown-body blockquote{background:#ddd;border-left:5px solid #ccc;padding:15px 20px;margin-top:10px}
+            .markdown-body blockquote>p:first-of-type{margin-top:0}
+            .markdown-body iframe{border:none}
+            .markdown-body table{background:#ddd;border:1px solid #ccc;border-spacing:0;margin-top:10px}
+            .markdown-body table th{background:#ccc;padding:0 15px}
+            .markdown-body table td{text-align:center}
+            .markdown-body table tr:nth-of-type(2n){background:#d5d5d5}
+            .markdown-body .caption{display:block;font-size:0.9em;color:#999;padding-left:25px;position:relative}
+            .markdown-body .caption:before{content:"\f040";color:#ccc;font:1.3em FontAwesome;line-height:1.6em;position:absolute;left:0}
+            .markdown-body .video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
+            .markdown-body .video-container iframe,.markdown-body .video-container object,.markdown-body .video-container embed{position:absolute;top:0;left:0;width:100%;height:100%;margin-top:0}
+            
+            .markdown-body footer{padding:15px 0;border-top:1px solid #fff;text-align:center;font-size:0.9em}
+            code,pre{background:#ddd;border:1px solid #ccc;font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace; font-size: 0.9em;}
+            code{font-size:0.9em;padding:1px 3px;margin:0 3px}
+            pre code{background:none;border:none;padding:0;margin:0}
+            
+            
+            .markdown-body p{margin-top:10px}
+            .markdown-body h2{font-size:1.3em;color:#333;margin-top:30px;font-weight:bold}
+            .markdown-body h2::before{border-bottom:none}
+            .markdown-body blockquote{border-left:5px solid #2571B8;background:#F7F7F7}
+            .markdown-body blockquote p{margin-top:0px}
+            .markdown-body table{line-height:1.2em}
+            .markdown-body table td{text-align:left}
+            
+            
+            .markdown-body pre{ background: none; border: none; padding: 0; margin: 4px 0px;}
+            .markdown-body{text-align: left;}
+            .markdown-body table th,.markdown-body table td{ padding: 4px;border-collapse: collapse; border:solid 1px #ddd;}
+            
+            .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6{ line-height: 1.2em;}
+            
+            .markdown-body{border: none;}
+            .markdown-body	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
+            
+            /*
+             
+             Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+             
+             */
+            
+            .hljs {
+                display: block;
+                overflow-x: auto;
+                padding: 0.5em;
+                background: #002b36;
+                color: #839496;
+                -webkit-text-size-adjust: none;
+            }
+            
+            .hljs-comment,
+            .diff .hljs-header,
+            .hljs-doctype,
+            .hljs-pi,
+            .lisp .hljs-string {
+                color: #586e75;
+            }
+            
+            /* Solarized Green */
+            .hljs-keyword,
+            .hljs-winutils,
+            .method,
+            .hljs-addition,
+            .css .hljs-tag,
+            .hljs-request,
+            .hljs-status,
+            .nginx .hljs-title {
+                color: #859900;
+            }
+            
+            /* Solarized Cyan */
+            .hljs-number,
+            .hljs-command,
+            .hljs-string,
+            .hljs-tag .hljs-value,
+            .hljs-rule .hljs-value,
+            .hljs-doctag,
+            .tex .hljs-formula,
+            .hljs-regexp,
+            .hljs-hexcolor,
+            .hljs-link_url {
+                color: #2aa198;
+            }
+            
+            /* Solarized Blue */
+            .hljs-title,
+            .hljs-localvars,
+            .hljs-chunk,
+            .hljs-decorator,
+            .hljs-built_in,
+            .hljs-identifier,
+            .vhdl .hljs-literal,
+            .hljs-id,
+            .css .hljs-function,
+            .hljs-name {
+                color: #268bd2;
+            }
+            
+            /* Solarized Yellow */
+            .hljs-attribute,
+            .hljs-variable,
+            .lisp .hljs-body,
+            .smalltalk .hljs-number,
+            .hljs-constant,
+            .hljs-class .hljs-title,
+            .hljs-parent,
+            .hljs-type,
+            .hljs-link_reference {
+                color: #b58900;
+            }
+            
+            /* Solarized Orange */
+            .hljs-preprocessor,
+            .hljs-preprocessor .hljs-keyword,
+            .hljs-pragma,
+            .hljs-shebang,
+            .hljs-symbol,
+            .hljs-symbol .hljs-string,
+            .diff .hljs-change,
+            .hljs-special,
+            .hljs-attr_selector,
+            .hljs-subst,
+            .hljs-cdata,
+            .css .hljs-pseudo,
+            .hljs-header {
+                color: #cb4b16;
+            }
+            
+            /* Solarized Red */
+            .hljs-deletion,
+            .hljs-important {
+                color: #dc322f;
+            }
+            
+            /* Solarized Violet */
+            .hljs-link_label {
+                color: #6c71c4;
+            }
+            
+            .tex .hljs-formula {
+                background: #073642;
+            }
+            
+            
+                </style>
+            
+        <style> @media print{ .hljs{overflow: visible; word-wrap: break-word !important;} }</style></head><body><div class="markdown-body">
+            <h1 id="toc_0">翟孟洋的简历</h1>
+            
+            <h2 id="toc_1">基本信息</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>姓名</strong></th>
+                        <th>翟孟洋</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td><strong>年龄</strong></td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td><strong>学历</strong></td>
+                        <td>大专</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Github</strong></td>
+                        <td><a href="https://github.com/myzhai">myzhai</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>手机</strong></td>
+                        <td>182-1094-5328</td>
+                    </tr>
+                    <tr>
+                        <td><strong>邮箱</strong></td>
+                        <td><a href="mailto:myzhai1991@gmail.com">myzhai1991@gmail.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2 id="toc_2">自我描述</h2>
+            
+            <h4 id="toc_3">学习过程:</h4>
+            
+            <ul>
+                <li>最开始的时候，利用业余时间，自学了一点C#，写了一款桌面版的科学计算器，兴趣开始转向IT行业，并最终选择了iOS</li>
+                <li>网上找iOS教学视频，撸了四个月，对iOS开发有了整体的认识</li>
+                <li>另外，由于视频教程侧重于API的使用，对于原理性的东西讲解较少，为此自学了几本iOS相关书籍，对大部分基本控件，网络模块，多线程，数据持久化等都有一定的了解，同时也学习了C和C++ (C++内容实在太多了，仍在学习中)</li>
+                <li>自学过程中遇到的问题，解决流程基本上是：官方文档 -> Google -> Stackoverflow</li>
+            </ul>
+            
+            <h4 id="toc_4">技术掌握:</h4>
+            
+            <ul>
+                <li>掌握基本控件, Storyboard 排版, 纯代码布局</li>
+                <li>熟悉 CoreGraphic，能够编写简单的动画</li>
+                <li>常用图型 API</li>
+            </ul>
+            
+            <hr/>
+            
+            <ul>
+                <li>掌握 GCD 常用API</li>
+                <li>熟悉 URLSession 常用API , 熟悉 SDWebImage PopAnimation 等第三方框架</li>
+                <li>了解 URLConnection，不过这个网络库已经被弃用了</li>
+            </ul>
+            
+            <hr/>
+            
+            <ul>
+                <li>掌握 C，Objective-C，简单地了解 C++</li>
+                <li>阅读英文文档基本上无压力</li>
+                <li>数据结构，对于链表，二叉树，堆栈，队列还是了解的</li>
+            </ul>
+            
+            <h2 id="toc_5">工作期望</h2>
+            
+            <ul>
+                <li><p><strong>工作城市:</strong><br/>
+                    北京</p></li>
+                <li><p><strong>期望薪资:</strong><br/>
+                    >5k</p></li>
+            </ul>
+            
+            <h2 id="toc_6">项目经验</h2>
+            
+            <h4 id="toc_7"><a href="https://github.com/myzhai/ZhihuDaily">知乎日报</a></h4>
+            
+            <ul>
+                <li><p><strong>职责:</strong> <br/>
+                    独立开发</p></li>
+                <li><p><strong>项目介绍:</strong> <br/>
+                    模仿知乎日报</p></li>
+                <li><p><strong>项目概况:</strong> <br/>
+                    基本框架已经搭好，正在填补功能，启动动画、侧滑设置栏、首页、图片轮播、沉浸式状态栏等基本上都完成了</p></li>
+                <li><p><strong>项目业绩:</strong></p>
+                    
+                    <ol>
+                        <li><p>app整体结构是UICollectionViewController，然后将作为首页的navigationController嵌入其中</p></li>
+                        <li><p>tableView和图片轮播中的来自于网络的图片的显示，用的SDWebImage</p></li>
+                        <li><p>对于navigationController原生的屏幕左侧边缘滑动返回功能，利用FDFullscreenPopGesture进行了扩展，返回操作更方便</p></li>
+                        <li><p>除了上面提到的SDWebImage和FDFullscreenPopGesture两个第三方库之外，其它所有功能都自己手撸，大量使用了通知和代理，尤其是涉及到scrollView及其子类的滑动时，比如navigationBar的渐变隐藏和图片轮播的尺寸渐变等</p></li>
+                        <li><p>网络部分用的是URLSession，处理网络连接时，也涉及到GCD和多线程的处理</p></li>
+                        <li><p>页面的搭建，storyboard、xib、纯代码都有用着，对于功能性页面，也有进行了封装，比如启动欢迎页面，内部直接封装了网络请求、动画等</p></li>
+                    </ol></li>
+            </ul>
+            
+            <h4 id="toc_8"><a href="https://github.com/myzhai/Game-1024-C">Game1024—C语言版</a> 和 <a href="https://github.com/myzhai/Game-1024-iOS">Game1024—iOS版</a></h4>
+            
+            <ul>
+                <li><p><strong>职责:</strong> <br/>
+                    独立开发</p></li>
+                <li><p><strong>项目介绍:</strong><br/>
+                    使用C语言撸的一个1024小游戏，并直接复用C代码和OC混编，撸出了iOS版本</p></li>
+                <li><p><strong>项目概况:</strong><br/>
+                    app已经完成并安装在iPhone6s上</p></li>
+                <li><p><strong>项目经验:</strong></p>
+                    
+                    <ol>
+                        <li>C版本的运行在终端上，主要用于游戏逻辑测试</li>
+                        <li>iOS版本直接复用C逻辑代码，使用OC搭建页面，从中有了C和OC混编的一点点经验</li>
+                        <li>个人认为最难的部分是如何在处理手势操作时恰当地调用C函数并且处理好指针操作和内存释放，因为C中的逻辑用到了malloc来分配内存</li>
+                        <li>测试通过后，将C逻辑封装成了静态库，运行在6s上的就是使用的该静态库</li>
+                    </ol></li>
+            </ul>
+            
+            <h4 id="toc_9"><a href="https://github.com/myzhai/Reversi">Game Reversi</a></h4>
+            
+            <ul>
+                <li><p><strong>职责:</strong> <br/>
+                    独立开发</p></li>
+                <li><p><strong>项目介绍:</strong><br/>
+                    使用C语言撸核心逻辑，OC撸界面</p></li>
+                <li><p><strong>项目概况:</strong><br/>
+                    app已经完成但未在真机上运行，手机系统升级但Xcode没有升级</p></li>
+                <li><p><strong>项目经验:</strong></p>
+                    
+                    <ol>
+                        <li>与iOS版本的1024不同，该项目将用C语言实现的游戏逻辑代码用OC进行了封装，外部代码只需要使用GameHandler类即可，并且该GameHandler类对外提供了block回调接口</li>
+                        <li>在GameHandler类内部，C部分则是大量使用指针、数组、动态内存分配与内存复制，该部分则是整个项目开发过程中最耗时的一部分，另外主要就是设计好外部调用的OC接口</li>
+                        <li>封装了GameView，所有的游戏逻辑、相关动画等，都封装在view内部了，controller只需要添加view然后设置参数即可</li>
+                        <li>封装了IntroductionView，类似于HUD那样的，不过比较轻量级，动画部分暂时没有对外提供接口（这个以后可以增加）</li>
+                    </ol></li>
+            </ul>
+            
+            <h4 id="toc_10"><a href="https://github.com/myzhai?tab=repositories">其他项目</a></h4>
+            <ul>
+            </ul>
+            
+            <h2 id="toc_11">技能树</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>技能</th>
+                        <th>了解</th>
+                        <th>熟悉</th>
+                        <th>掌握</th>
+                        <th>精通</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>基础 UI 控件</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>基础排版</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Core Animation</td>
+                        <td>*</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>数据持久化</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Objective-C</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>*</td>
+                        <td>*</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>*</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div></body>
+        
+</html>
+
